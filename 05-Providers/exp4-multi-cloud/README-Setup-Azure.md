@@ -7,19 +7,19 @@
 ##### Now Create Azure Contributor Service Principal for terraform Auth.
 
 ```
-# az login 
+az login 
 ```
 
 ```
-# az account list -o table 
+az account list -o table 
 ```
 
 ```
-# az account set -s "<subscription-id>"
+az account set -s "<subscription-id>"
 ```
 
 ```
-# az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscription_id>"
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscription_id>"
 ```
 
 
@@ -27,10 +27,10 @@
 
 ### Export the Azure Auth Variable in your bash RC. 
 ```
-export ARM_CLIENT_SECRET="<<password>>"
-export ARM_CLIENT_ID="<<appID>>"
-export ARM_SUBSCRIPTION_ID="<<subscriptionID>>"
-export ARM_TENANT_ID="<<tenant>>"
+echo "export ARM_CLIENT_SECRET="<<password>>" " >> ~/.bashrc
+echo "export ARM_CLIENT_ID="<<appID>>" ">> ~/.bashrc
+echo "export ARM_SUBSCRIPTION_ID="<<subscriptionID>>" ">> ~/.bashrc
+echo "export ARM_TENANT_ID="<<tenant>>" ">> ~/.bashrc
 ```
 
 ### Initialize the Bashrc Variables
