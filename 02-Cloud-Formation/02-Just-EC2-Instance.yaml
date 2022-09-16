@@ -6,3 +6,7 @@ Resources:
       AvailabilityZone: us-east-2a
       ImageId: ami-0568773882d492fc8
       InstanceType: t2.micro
+      Tags:
+        - Key: Name
+          Value : My-Test-EC2
+          
