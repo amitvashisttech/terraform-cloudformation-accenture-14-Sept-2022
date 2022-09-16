@@ -23,6 +23,7 @@ Resources:
       AvailabilityZone: us-east-2a
       ImageId: ami-0568773882d492fc8
       InstanceType: !Ref InstaceType
+      KeyName: !Ref KeyName
       SecurityGroups:
         - !Ref SSHSecurityGroup
         - !Ref ServerSecurityGroup
