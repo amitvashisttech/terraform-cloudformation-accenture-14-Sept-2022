@@ -1,0 +1,12 @@
+  457  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  458  unzip awscliv2.zip
+  464  ./aws/install -i /home/amit/aws-cli -b /home/amit/bin
+  465  aws --version 
+  507  aws ec2 create-key-pair --key-name MyKeyPairAWSCLITest --query 'KeyMaterial' --output text > MyKeyPairAWSCLITest.pem
+  508  cat MyKeyPairAWSCLITest.pem 
+  516  aws cloudformation create-stack  --stack-name myteststack --template-body file:///home/amit/terraform-cloudformation-accenture-14-Sept-2022/02-Cloud-Formation/01-Creating-s3-bucket.yaml 
+  517  aws cloudformation list-stacks
+  519  aws cloudformation delete-stack --stack-name myteststack 
+  525  ssh -i MyKeyPairAWSCLITest.pem ec2-user@3.141.92.20
+  526  chmod 400 MyKeyPairAWSCLITest.pem 
+  527  ssh -i MyKeyPairAWSCLITest.pem ec2-user@3.141.92.20
